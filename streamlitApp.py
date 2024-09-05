@@ -23,7 +23,7 @@ st.write(f"model {accuracy}")
 st.header("Real_time prediction")
 input_data=[]
 for col in X_test.columns:
-   input_value = st.number_input(f'input for feature{col}',value='')
+   input_value = st.number_input(f'input for feature{col}',value=0)
    input_data.append(input_value)
 #convert input dataa to dataframe
 input_df = pd.DataFrame([input_data],columns=X_test.columns)
