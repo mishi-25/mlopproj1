@@ -14,11 +14,11 @@ X_train, X_test, y_train, y_test= train_test_split(X, y, test_size=0.2, random_s
 #make predicition for X_test set
 y_pred = model.predict(X_test)
 #calculate accuracy
-accuracy = accuracy_score
+accuracy = accuracy_score(y_test, y_pred)
 #page title
 st.title("model Accuracy and real_time Prediction")
 #display accuracy
-st.write(f"model {accuracy}")
+st.write(f"Model {accuracy}")
 #real time prediction based on users input
 st.header("Real_time prediction")
 input_data=[]
